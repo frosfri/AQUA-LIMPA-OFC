@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Solicitação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+        .row div {
+            flex: 1;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastro.php" method="POST">
+        <div class="container">
+            <h2>Formulário de Solicitação</h2>
+            <label>Tipo do solicitante: </label>
+            <input type="text" name="tipo" required>
+            <div class="row">
+                <div>
+                    <label>Nome: </label>
+                    <input type="text" name="nome" required>
+                </div>
+                <div>
+                    <label>Contato: </label>
+                    <input type="text" name="contato" required>
+                </div>
+            </div>
+            <label>E-mail:</label>
+            <input type="email" name="email" required>
+            <label>Senha: </label>
+            <input type="password" name="senha" required>
+            <label>CPF/CNPJ:* </label>
+            <input type="text" name="cpf" required>
+            <div class="row">
+                <div>
+                    <label>Município: </label>
+                    <input type="text" name="municipio" required>
+                </div>
+                <div>
+                    <label>Bairro: </label>
+                    <input type="text" name="bairro" required>
+                </div>
+            </div>
+            <label>Logradouro: </label>
+            <input type="text" name="logradouro" required>
+            <label>Número: </label>
+            <input type="number" name="numero" required>
+            <label>Pavimento da Rua: </label>
+            <input type="text" name="rua">
+            <label>Pavimento da calçada: </label>
+            <input type="text" name="calcada">
+            <label>Coordenada Norte: </label>
+            <input type="text" name="coordenada_norte">
+            <label>Coordenada Leste: </label>
+            <input type="text" name="coordenada_leste">
+            <label>Ponto de referência: </label>
+            <textarea name="referencia" required></textarea>
+            <label>Observações: </label>
+            <textarea name="observacao"></textarea>
+            <button class="btn" type="submit">Enviar</button>
+        </div>
+    </form>
+</body>
+</html>

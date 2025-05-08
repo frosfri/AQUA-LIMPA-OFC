@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sensor de Vazamento</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+    body {
+      font-family: 'Fredoka One', cursive;
+    }
+  </style>
+  <script>
+    function voltarOuRedirecionar() {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = "produtos.html";
+      }
+    }
+  </script>
+</head>
+<body class="bg-white min-h-screen flex flex-col">
+
+  <header class="bg-blue-800 px-6 py-6 flex items-center justify-between shadow-md">
+
+    <button onclick="voltarOuRedirecionar()" class="text-white hover:text-gray-300 transition duration-200" aria-label="Voltar">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <h1 class="text-white text-3xl sm:text-5xl text-center flex-1 -ml-10">SENSOR DE VAZAMENTO</h1>
+
+    <div class="w-10 h-10"></div>
+  </header>
+
+  <main class="flex-1 flex items-center justify-center px-4 py-8">
+    <div class="max-w-6xl w-full flex flex-col sm:flex-row items-center justify-center gap-12">
+
+      <div class="flex justify-center">
+        <img src="produto1.png" alt="Sensor de Vazamento" class="w-44 sm:w-64 object-contain drop-shadow-xl" />
+      </div>
+
+      <div class="bg-blue-800 text-white text-lg sm:text-2xl rounded-xl p-6 sm:p-8 w-full sm:w-[420px] shadow-lg">
+        <p><strong>Nome:</strong> Sensor De Vazamento</p>
+        <p class="mt-4"><strong>Função:</strong> Detecta nível de água, qualidade, vazamentos ou umidade para automação.</p>
+        <p class="mt-4"><strong>Validade:</strong> 3 a 5 anos</p>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
