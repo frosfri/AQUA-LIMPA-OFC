@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fatura por E-mail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #fefef8;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #004278;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .descricao {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+      color: #111;
+    }
+
+    input {
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: 1.5px solid #ddd;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #aaa;
+    }
+
+    button {
+      margin-top: 10px;
+      background-color: #1e5f95;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background-color: #164a75;
+    }
+
+    .message {
+      font-size: 16px;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="Logo1.png" alt="Logo AquaLimpa" class="logo" />
+    
+    <h1>Fatura por E-mail</h1>
+    
+    <p class="descricao">
+      Receber a fatura por e-mail contribui<br>
+      para a economia de papel e recursos.
+    </p>
+
+    <form id="faturaForm">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="exemplo@email.com" required />
+
+      <button type="submit">ATIVAR</button>
+    </form>
+
+    <div id="confirmationMessage" class="message" style="display: none;">
+      A opção de fatura por e-mail foi ativada com sucesso!
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('faturaForm');
+    const confirmationMessage = document.getElementById('confirmationMessage');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();  
+
+      
+      confirmationMessage.style.display = 'block'; 
+    });
+  </script>
+</body>
+</html>
