@@ -1,0 +1,14 @@
+create database AQUALIMPA;
+use AQUALIMPA;
+
+drop table usuario;
+
+create table usuario (
+id int auto_increment primary key,
+nome varchar(100),
+dtnasc varchar(100),
+email varchar (102),
+senha varchar(102)
+);
+
+select*from usuario;
